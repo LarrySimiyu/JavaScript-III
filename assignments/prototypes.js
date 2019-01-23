@@ -19,10 +19,10 @@
 */
 
 function GameObject(attrs) {
-    this.createdAt = attrs.createdAt;
-    this.dimensions = attrs.dimensions;
-    this.destroy = function() {
-    return `${this.name} was removed from the game`;
+    this.createdAt  =   attrs.createdAt;
+    this.dimensions =   attrs.dimensions;
+    this.destroy    =   function() {
+          return `${this.name} was removed from the game`;
     }
 
  }
@@ -45,8 +45,8 @@ function GameObject(attrs) {
 function CharacterStats(characterAttr) {
   GameObject.call(this, characterAttr);
   this.healthPoints = characterAttr.healthPoints;
-  this.name = characterAttr.name;
-  this.takeDamage = function() {
+  this.name         = characterAttr.name;
+  this.takeDamage   = function() {
     return `${this.name} took damage`;
   }
 
@@ -64,10 +64,10 @@ function CharacterStats(characterAttr) {
 
 function Humanoid(humanAttr) {
   CharacterStats.call(this,humanAttr);
-  this.team = humanAttr.team;
-  this.weapons = humanAttr.weapons;
-  this.language = humanAttr.language;
-  this.greet = function() {
+  this.team       = humanAttr.team;
+  this.weapons    = humanAttr.weapons;
+  this.language   = humanAttr.language;
+  this.greet      = function() {
     return `${this.name} offers a greeting in ${this.language}`;
 
   }
@@ -87,9 +87,9 @@ function Humanoid(humanAttr) {
   const mage = new Humanoid({
     createdAt: new Date(),
     dimensions: {
-      length: 2,
-      width: 1,
-      height: 1,
+      length  : 2,
+      width   : 1,
+      height  : 1,
     },
     healthPoints: 5,
     name: 'Bruce',
