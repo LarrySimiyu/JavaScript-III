@@ -58,7 +58,9 @@ const alien = {
 const abilities = ['lazer eyes', 'cold breath', 'programming'];
 
 function introduce() {
-    console.log(`Hello my name is ${this.name}, and my abilities are ${abilities1}, ${abilities2}, ${abilities3}`);
+   // console.log(`Hello my name is ${this.name}, and my abilities are ${abilities[0]}, ${abilities[1]}, ${abilities[2]}`);
+   console.log(`Hello my name is ${this.name}, and my abilities are ${[...abilities]}`)
+   // study line ^ spread operator
 }
 
 introduce.apply(person, abilities);
